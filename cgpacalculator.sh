@@ -24,4 +24,4 @@ do
 	echo  ${arr[5]} ${arr[6]} ${arr[7]}>>  order
 done < "c4b.txt"	
 grep MDL16CS order > order2
-join <(sort order2)<(sort final) > result.txt 
+join <(sort order2)<(sort tl) > result.txt 
