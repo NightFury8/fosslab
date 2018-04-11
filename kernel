@@ -1,0 +1,21 @@
+#kernel configuration
+#Download kernel 
+#extract kernel tarball 
+tar -xvf kernel.tar
+#cd into the extracted directory 
+cd /usr/src/linux
+#generate .config file
+#select the reqired modules for your storage device ,wifi card, cpu , powermanagement etc
+#include support for initramfs if needed
+#include cpu microcode loading support if necessory (Recomended for Haswel and up
+#enable support for multi cor enhancement and acpi
+#include support for root file system 
+#enable scsi disk support
+#enable usb support
+#enable support for reqired partition lablel (MBR or GPT)
+#enable support for UEFI if reqired
+#compile the kernel using 5 threads
+make 
+#compile kernel modules 
+make modules_install
+

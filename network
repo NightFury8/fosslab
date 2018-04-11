@@ -1,0 +1,6 @@
+ifconfig eth0 192.168.0.4 netmask 255.255.252.0 up
+route add default gw 192.188.0.8
+#edit resolv.conf
+vim /etc/resolv.conf
+nameserver 8.8.8.8
+

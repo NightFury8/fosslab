@@ -1,0 +1,10 @@
+#Mannually boot using grub commandline
+#list all partitions
+ls 
+#set root partition
+set root=(hd0,3)
+#specify kernel 
+linux /boot/vmlinuz-3.13.0-29-generic root=/dev/sda root=/dev/sda3
+initrd  /boot/initramfs-genkernel-x86_64-4.9.76-gentoo-r1 
+#boot
+boot

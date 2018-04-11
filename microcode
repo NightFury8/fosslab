@@ -1,0 +1,10 @@
+#updating intel microcode at boot
+#compile and install microcode firmware with emerge script 
+emerge --ask --noreplace sys-firmware/intel-microcode sys-apps/iucode_tool
+#configuration
+iucode_tool -S --write-earlyfw=/boot/early_ucode.cpio /lib/firmware/intel-ucode/*
+#configuring grub legacy to load microcode at boot
+title Gentoo Linux 4.4.6
+root (hd0,0)
+kernel /boot/vmlinuz-4.4.6-gentoo root=/dev/sda3
+initrd /boot/intel-uc.img /boot/early-ucode.cpio

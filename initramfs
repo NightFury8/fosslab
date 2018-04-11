@@ -1,0 +1,8 @@
+#generate initramfs 
+#using gentoo,a source based linux distribution 
+#genkernel can be used to generate initramfs
+#emerge genkernel 
+emerge --ask --verbose sys-kernel/genkernel
+#generate initramfs using genkernel 
+genkernel --install initramfs
+
