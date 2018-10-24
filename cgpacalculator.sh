@@ -1,6 +1,7 @@
 #!/bin/bash
 #download resultorder c4b.txt
 #result.txt is final result
+#Yo Abin What up its Aman bruh. Dont mind this
 
 paste results1.txt results2.txt > result12
 while read -r line
